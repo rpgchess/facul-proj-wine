@@ -1,0 +1,36 @@
+<div class="container" style="overflow-y: auto">
+	<table class="table table-hover">
+	<thead>
+		<tr>
+			<th style="width:05%;" scope="col">#</th>
+			<th style="width:30%;" scope="col"><input type="text" name="search" id="search" ng-model="search" placeholder="Vinho"></th>
+			<th style="width:05%;" scope="col">Ano</th>
+			<th style="width:10%;" scope="col">Tipo</th>
+			<th style="width:20%;" scope="col">Valor</th>
+			<th style="width:30%;" scope="col">Ações</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="wine in wines | filter:search">
+			<th scope="row">{{wine.id}}</th>
+			<td>{{wine.nome}}</td>
+			<td>{{wine.ano}}</td>
+			<td>{{wine.tipo}}</td>
+			<td>R$ {{wine.valor}}</td>
+			<td>
+				<form class="form-inline" action="#">
+					<div class="form-group row">
+						<div class="col-sm-4">
+							<a href="edit/{{wine}}" class="btn btn-sm btn-primary">Editar</a>
+						</div>
+						<div class="col-sm-4">
+							<a href="del/{{wine}}" class="btn btn-sm btn-primary">Remover</a>
+						</div>
+					</div>
+				</form>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+	<a href="new" class="btn btn-primary">Nova</a>
+</div>

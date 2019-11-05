@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/*
+#colors {
+	background: #71141c;
+	background: #9b1923;
+	background: #cf343f;
+}
+*/
+/* GLOBAL */
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#search {
+	border: 0px solid white;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/* NAVBAR */
+#navbar {
+	background: #9b1923;
+}
+
+.navbar-fixed-top {
+	width: 100%;
+	position: fixed;
+	padding-left: 10px;
+	border-radius: 0;
+	height: 50px;
+}
+
+/* SIDEBAR */
+#sidebar {
+	top: 50px;
+    min-width: 200px;
+    max-width: 200px;
+	position: fixed;
+	border-radius: 0;
+	transition: all 0.3s;
+	height: calc(100% - 50px);
+	background-image: linear-gradient(#9b1923,#cf343f,#fff,#fff,#fff,#fff,#fff,#fff);
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+}
+
+#sidebar .sidebar-footer {
+    padding: 20px;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #71141c;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+}
+
+/* SIDEBAR MEDIAQUERIES */ 
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+/* CONTAINER */
+.container {
+	top: 50px;
+	left: 190px;
+	margin: 20px;
+	width: calc(100% - 250px);
+	position: fixed;
+	border-radius: 0;
+	height: calc(100% - 150px);
+}
+
+/* CONTAINER MEDIAQUERIES */ 
+@media (max-width: 768px) {
+    .container {
+        left: -10px;
+        width: calc(100% - 50px);
+    }
+}
